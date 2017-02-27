@@ -14,7 +14,7 @@ RUN mkdir /root/.cargo
 VOLUME ["/root/.cargo"]
 
 RUN yum update -y
-RUN yum install -y git file gcc gcc-c++ make openssl-devel
+RUN yum install -y git file gcc gcc-c++ make openssl-devel readline-devel
 RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=$RUST_CHANNEL --disable-sudo
 
 ENTRYPOINT ["cargo"]
